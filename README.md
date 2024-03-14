@@ -14,14 +14,14 @@ Bucket ของ Composer จะถูกสร้างอัตโนมัต
 
 
 
-step 2 : ทำการลง Python packages ที่จะใช้ในโปรเจกต์ให้เรียบร้อย โดยเลือก PYPI PACKAGES ในหน้า Environment detail จากนั้นกด edit และใส่ package ที่จะใช้ (โดยใน project นี้จะใช้ requests, pymysql, pandas ในการจัดการกับข้อมูล)
+step 2 : ทำการติดตั้ง Python packages ที่จะใช้ในโปรเจกต์ให้เรียบร้อย โดยเลือก PYPI PACKAGES ในหน้า Environment detail จากนั้นกด edit และใส่ package ที่จะใช้ (โดยใน project นี้จะใช้ requests, pymysql, pandas ในการจัดการกับข้อมูล)
 
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/8b7980bc-3b2c-4837-8036-24ba77de1643)
 
 
 
 
-step 3 : ต่อ connection กับ MySql โดยเข้าหน้า Airflow Web UI แล้วเลือก Admin > connections แล้ว edit connection และใส่ข้อมูล connection ที่เราจะเชื่อมต่อ (Host, Schema, Login, Password, Port)
+step 3 : เชื่อมต่อ connection กับ MySql โดยไปที่หน้า Airflow Web UI แล้วเลือก Admin > connections แล้ว edit connection และใส่ข้อมูล connection ที่เราจะเชื่อมต่อ (Host, Schema, Login, Password, Port)
 
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/2594d807-a9ae-47dd-bb4e-f6f4ef44886d)
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/1f12ecf3-6c73-4891-a0f3-66b80ea1b411)
@@ -29,18 +29,18 @@ step 3 : ต่อ connection กับ MySql โดยเข้าหน้า 
 
 
 
-step 4 : สร้าง Dataset ใน Google BigQuery โดยเลือก region เดียวกับ Composer Environment เพื่อใช้ในการเก็บ Table ที่จะส่งเข้าไป โดย Project นี้ใช้ region เป็น us-central1
+step 4 : สร้าง Dataset ใน Google BigQuery โดยเลือก region เดียวกับ Composer Environment เพื่อใช้ในการเก็บ Table ที่จะส่งเข้าไป (โดย Project นี้ใช้ region เป็น us-central1)
 
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/c803c9ba-2745-4784-9b47-8f6bafbf9b4c)
 
 
 
 
-step 5 : ทำการ upload file.py(แนบไฟล์ไว้ด้านบน) ที่จะใช้ในการสร้าง DAG ของ Pipeline นี้ลงใน folder dags ใน bucket ของ composer environment
+step 5 : ทำการ upload file.py (แนบไฟล์ไว้ด้านบน) ที่จะใช้ในการสร้าง DAG ของ Pipeline นี้ลงใน folder dags ใน bucket ของ composer environment
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/08ea579a-941a-48d8-93ea-fe6317ac9b2b)
 
 
-รอสักครู่แล้ว DAG ใหม่จะโชว์ในหน้าAirflow Web UI พร้อมกับ run DAG ในครั้งแรก
+รอสักครู่แล้ว DAG ใหม่จะโชว์ในหน้า Airflow Web UI พร้อมกับ run DAG ในครั้งแรก
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/ce3d2e33-5934-439a-837a-3442f26f63c2)
 
 
