@@ -6,8 +6,9 @@ step 1 : สร้าง Airflow (ซึ่งใน GCP จะสามาร�
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/0f5f672b-caf6-471b-a103-1d7dbe091351)
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/bced06c9-b862-4592-a58a-57e2a39d143d)
 
-เมื่อสร้าง composer environment สำเร็จจะขึ้นเครื่องหมายถูกด้านหน้าชื่อ environment, 
+เมื่อสร้าง composer environment สำเร็จจะขึ้นเครื่องหมายถูกด้านหน้าชื่อ environment/ 
 Bucket ของ Composer จะถูกสร้างอัตโนมัติ ใน GCS และจะถูก mount กับ folder ของ Airflow
+
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/d1d96436-3887-4819-bae7-dd9632a19640)
 
 
