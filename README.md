@@ -1,6 +1,6 @@
 # miniproject07
 ETL workshop by using GCP & Apache airflow
-สร้าง Project ในการทำ Data Pipeline แบบง่ายๆ โดยดึงข้อมูลจาก MySql และ Api เพื่อนำข้อมูลมา merge กันแล้ว Transform ข้อมูลมาเก็บลงบน Data Lake(Google Cloud Storage) จากนั้นนำข้อมูลที่อยู่ใน Data Lake ส่งไปที่ Data warehouse(Google BigQuery)
+สร้าง Project ในการทำ Data Pipeline แบบง่ายๆ โดยดึงข้อมูลจาก MySql และ API เพื่อนำข้อมูลมา merge กันแล้ว Transform ข้อมูลมาเก็บลงบน Data Lake(Google Cloud Storage) จากนั้นนำข้อมูลที่อยู่ใน Data Lake ส่งไปที่ Data warehouse(Google BigQuery)
  
 step 1 : สร้าง Airflow (ซึ่งใน GCP จะสามารถใช้ Airflow ผ่าน Cloud Composer โดยเข้า console.cloud.google.com เพื่อทำการสร้างโปรเจกต์ แล้ว create composer environment โดยใช้ composer2)
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/0f5f672b-caf6-471b-a103-1d7dbe091351)
@@ -44,7 +44,7 @@ step 5 : ทำการ upload file.py (แนบไฟล์ไว้ด้า
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/ce3d2e33-5934-439a-837a-3442f26f63c2)
 
 
-โดย Task ใน DAG นี้จะประกอบไปด้วย 4 Task โดย Task1 จะดึงข้อมูลจาก MySql มาเก็บไว้ใน GCS , Task2 จะดึงข้อมูลจาก Api มาเก็บไว้ใน GCS , Task3 merge และ transfrom ข้อมูลแล้วเก็บไว้ใน GCS , Task4 จะนำข้อมูลที่ถูกเก็บไว้ใน GCS นำเข้า Google BigQuery
+โดย Task ใน DAG นี้จะประกอบไปด้วย 4 Task โดย Task1 จะดึงข้อมูลจาก MySql มาเก็บไว้ใน GCS , Task2 จะดึงข้อมูลจาก API มาเก็บไว้ใน GCS , Task3 merge และ transfrom ข้อมูลแล้วเก็บไว้ใน GCS , Task4 จะนำข้อมูลที่ถูกเก็บไว้ใน GCS นำเข้า Google BigQuery
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/34220d2f-3692-4ba8-85a1-befb524fe39d)
 
 เมื่อ DAG รันครบลูป(กรอบ task ในหน้า graph เป็นสีเขียวเข้มทั้งหมด) จะพบไฟล์ใน folder DATA ใน bucket ของ composer และจะพบ Table ไปโชว์ใน Dataset ที่สร้างไว้ใน BigQuery
