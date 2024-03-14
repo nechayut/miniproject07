@@ -14,7 +14,7 @@ Bucket ของ Composer จะถูกสร้างอัตโนมัต
 
 
 
-step 2 : ทำการลง Python packages ที่จะใช้ในโปรเจกต์ให้เรียบร้อย โดยเลือก PYPI PACKAGES ในหน้า Environment detail จากนั้นกด edit และใส่ package ที่จะใช้ โดยใน project นี้จะใช้ requests, pymysql, pandas ในการจัดการกับข้อมูล
+step 2 : ทำการลง Python packages ที่จะใช้ในโปรเจกต์ให้เรียบร้อย โดยเลือก PYPI PACKAGES ในหน้า Environment detail จากนั้นกด edit และใส่ package ที่จะใช้ (โดยใน project นี้จะใช้ requests, pymysql, pandas ในการจัดการกับข้อมูล)
 
 ![image](https://github.com/nechayut/miniproject07/assets/101554284/8b7980bc-3b2c-4837-8036-24ba77de1643)
 
