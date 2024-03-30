@@ -1,4 +1,4 @@
-# miniproject07
+# Airflow with Cloud Composer
 ETL workshop by using GCP & Apache airflow
 สร้าง Project ในการทำ Data Pipeline แบบง่ายๆ โดยดึงข้อมูลจาก MySql และ API เพื่อนำข้อมูลมา merge กันแล้ว Transform ข้อมูลมาเก็บลงบน Data Lake(Google Cloud Storage) จากนั้นนำข้อมูลที่อยู่ใน Data Lake ส่งไปที่ Data warehouse(Google BigQuery)
  
